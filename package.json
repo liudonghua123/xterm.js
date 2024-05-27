@@ -1,11 +1,12 @@
 {
-  "name": "@xterm/xterm",
+  "name": "@liudonghua123/xterm",
   "description": "Full xterm terminal, in your browser",
   "version": "5.4.0",
   "main": "lib/xterm.js",
+  "module": "lib/xterm-esm.js",
   "style": "css/xterm.css",
   "types": "typings/xterm.d.ts",
-  "repository": "https://github.com/xtermjs/xterm.js",
+  "repository": "https://github.com/liudonghua123/xterm.js",
   "license": "MIT",
   "keywords": [
     "cli",
@@ -24,7 +25,7 @@
   ],
   "scripts": {
     "prepackage": "npm run build",
-    "package": "webpack",
+    "package": "webpack && webpack --config ./webpack.config.esm.mjs",
     "package-headless": "webpack --config ./webpack.config.headless.js",
     "postpackage-headless": "node ./bin/package_headless.js",
     "start": "node demo/start",
